@@ -1,4 +1,4 @@
-let Sort = (arr) => {
+let selectionSort = (arr) => {
     ///Selection sort
     let len = arr.length;
     for (let i = 0; i < len; i++) {

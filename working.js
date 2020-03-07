@@ -1,30 +1,24 @@
 
-let numeros, hand;
+let numeros, hand, sel="0";
 let draw=document.getElementById("draw");
 let sort=document.getElementById("sort");
-let bubble=document.getElementById("bubble");
-let select=document.getElementById("select");
-let insertion=document.getElementById("insertion");
+let selection=document.getElementById("selection");
 
 draw.addEventListener("click",function(){
     numeros=parseInt(document.getElementById("text").value)
     hand=randomhand(numeros);
     drawer(hand);
+})
 
+selection.addEventListener("change",function(e){
+    sel=e.target.value;
 })
 
 sort.addEventListener("click",function(){
-    hand=Sort(hand);
+    switch (sel){
+        case "0": bubbleSort(hand);break;
+        case "1": selectionSort(hand); break;
+        case "2": insertionSort(hand); break;
+    }
 })
 
-bubble.addEventListener("click",function(){
-    document.querySelector("script").innerHTML(`<script id="lonk" type="text/javascript" src="sorting_algoritm.js"></script>`);
-})
-
-select.addEventListener("click",function(){
-    document.querySelector("script").innerHTML(`<script id="lonk" type="text/javascript" src="sorting_algoritm2.js"></script>`);
-})
-
-insertion.addEventListener("click",function(){
-    document.getElementById("lonk").innerHTML(`<script id="lonk" type="text/javascript" src="sorting_algoritm3.js"></script>`);
-})

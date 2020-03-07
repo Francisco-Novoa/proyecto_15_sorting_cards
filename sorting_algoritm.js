@@ -1,4 +1,4 @@
-function Sort(arr) {
+function bubbleSort(arr) {
   ///bubblesort
     var len = arr.length;
   

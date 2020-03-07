@@ -1,4 +1,4 @@
-const Sort = (arr) => {
+const insertionSort = (arr) => {
     ///insertion sort
     for (let i = 1; i < arr.length; i++) {
         let key = arr[i];

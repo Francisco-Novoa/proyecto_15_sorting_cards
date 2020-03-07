@@ -1,5 +1,4 @@
 function swap(items, leftIndex, rightIndex,pivot){
-    console.log("c")
     var temp = items[leftIndex];
     items[leftIndex] = items[rightIndex];
     items[rightIndex] = temp;
@@ -8,7 +7,7 @@ function swap(items, leftIndex, rightIndex,pivot){
     catch(error){console.log(error)}
     try{document.querySelector(`#content > div:last-child > div:nth-child(${rightIndex+1})`).classList.add("swaped1")}
     catch(error){console.log(error)}
-    try{document.querySelector(`#content > div:last-child > div:nth-child(${pivot+1})`).classList.add("swaped3")}
+    try{document.querySelector(`#content > div:last-child > div:nth-child(${pivot})`).classList.add("swaped3")}
     catch(error){console.log(error)}
 }
 function partition(items, left, right) {
@@ -16,15 +15,12 @@ function partition(items, left, right) {
     var pivot   = items[Math.floor((right + left) / 2)].numero, //middle element
         i       = left, //left pointer
         j       = right; //right pointer
-        console.log(pivot)
     while (i <= j) {
         
         while (items[i].numero < pivot) {
-            console.log(i)
             i++;
         }
         while (items[j].numero > pivot) {
-            console.log(j)
             j--;
         }
         if (i <= j) {
@@ -39,7 +35,6 @@ function partition(items, left, right) {
 
 function quickSort(items, left, right) {
     var index;
-    console.log("a")
     if (items.length > 1) {
         index = partition(items, left, right); //index returned from partition
         if (left < index - 1) { //more elements on the left side of the pivot
@@ -50,4 +45,7 @@ function quickSort(items, left, right) {
         }
     }
     return items;
+    div=document.createElement("div");
+    document.querySelector("#content").appendChild(div);
+    document.querySelector("#content > div:last-child").classList.add("separator");
 }

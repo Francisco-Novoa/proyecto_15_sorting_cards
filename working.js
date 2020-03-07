@@ -19,6 +19,7 @@ sort.addEventListener("click",function(){
         case "0": bubbleSort(hand);break;
         case "1": selectionSort(hand); break;
         case "2": insertionSort(hand); break;
+        case "3": quickSort(hand,0,hand.length-1); break;
     }
 })
 

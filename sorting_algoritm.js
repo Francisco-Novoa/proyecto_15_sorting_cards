@@ -15,5 +15,7 @@ function Sort(arr) {
       }
      }
     }
-    return arr;
+    div=document.createElement("div")
+    document.querySelector("#content").appendChild(div);
+    document.querySelector("#content > div:last-child").classList.add("separator");
   }

@@ -65,12 +65,12 @@ body{
 .swaped1{
     border-width: 3px;
     border-style: solid;
-    border-color: blue;
+    border-color: hotpink;
 }
 .swaped2{
     border-width: 3px;
     border-style: solid;
-    border-color: red;
+    border-color: yellow;
 }
 .separator{
     height: 33px;

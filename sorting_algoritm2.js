@@ -20,8 +20,7 @@ let Sort = (arr) => {
             catch(error){console.log(error)}
         }
     }
-    div=document.createElement("div")
+    div=document.createElement("div");
     document.querySelector("#content").appendChild(div);
-    document.querySelector("#content > div:last-child").classList.add("separator")
-    return arr;
+    document.querySelector("#content > div:last-child").classList.add("separator");
 }
